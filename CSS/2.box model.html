@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODEL</title>
+    <style>
+        * {
+            margin: 0; /* remover default margin  */
+            padding: 0;
+        }
+        .box { 
+            background-color: aqua;
+            
+        }
+        .box1 {
+            color: red;
+            padding: 10px; /* space inside the box */
+            margin: 10px; /* space outside the box */
+            border: 1px solid black; /* border around the box */
+            height: 30px; /* height of the whole box */
+            width: 200px; /* width of the whole box */
+            box-sizing: border-box; /* include padding and border in the element's total width and height */
+            text-align: center; /* center text inside the box */
+
+
+        }
+        .box2 {
+            color: yellow;
+            padding: 10px; /* space inside the box */
+            margin: 10px; /* space outside the box */
+            border: 1px solid black; /* border around the box */
+            height: 30px; /* height of the whole box */
+            width: 200px; /* width of the whole box */
+            box-sizing: border-box; /* include padding and border in the element's total width and height */
+            text-align: center; /* center text inside the box */
+
+        }
+        .box3 {
+            color: lightsalmon;
+            padding: 10px; /* space inside the box */
+            margin: 10px; /* space outside the box */
+            border: 1px solid black; /* border around the box */
+            height: 30px; /* height of the whole box */
+            width: 200px; /* width of the whole box */
+            box-sizing: content-box; /* exclude padding and border from the element's total width and height */ /* content-box is the default value */
+            text-align: center; /* center text inside the box */
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Shortcut - "div.box" press enter to directly create div with class box -->
+    <!-- Shortcut - "div#box" press enter to directly create div with id box -->
+    <div class="box box1">first box</div> 
+    <div class="box box2">Second box</div>
+    <div class="box box3">Third box</div>
+
+    <h1>Box Model</h1>
+    <img src="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/tutorial/css-box-model/box%20model.png" width="600" alt=""><br>
+    <h1>Margin Collapse</h1><br>
+    <img src="https://miro.medium.com/v2/resize:fit:421/0*kAD00byJs8jdmXvr.png" width="300" alt="">
+</body>
+</html>
