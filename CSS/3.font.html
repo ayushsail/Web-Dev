@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style and Decoration Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+        /* Font Family */
+        .font-family {
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-family sets the typeface for the text */
+        }
+
+        /* Google Font */
+        /* there are two ways */
+        /* First with import url and Second with link */
+        .google-font-import {
+            font-family: "Baloo 2", sans-serif;
+        }
+        .google-font-link {
+           font-family: "Poppins", sans-serif;
+           text-transform: uppercase;
+           font-weight: bold;
+        }
+
+        /* Font Size */
+        .font-size {
+            font-size: 24px;
+            /* font-size sets the size of the text */
+        }
+
+        /* Font Weight */
+        .font-weight {
+            font-weight: bold;
+            /* font-weight makes the text bold (other values: normal, lighter, bolder, 100-900) */
+        }
+
+        /* Font Style */
+        .font-style {
+            font-style: italic;
+
+            /* font-style makes the text italic (other values: normal, oblique) */
+        }
+
+        /* Font Case */
+        .text-transform {
+            text-transform: uppercase;
+            /* text-transform changes the case of the text (other values: lowercase, capitalize, none) */
+
+        }
+        .font-variant {
+            font-variant: small-caps;
+            /* font-variant displays text in small-caps (other value: normal) */
+        }
+
+        /* Line height and Letter spacing */
+        .line-height {
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+            /* line-height sets the space between lines */
+            /* letter-spacing sets the space between letters */
+        }
+
+        /* Text Decoration: underline */
+        .text-underline {
+            text-decoration: underline;
+            /* text-decoration adds underline (other values: overline, line-through, none, underline overline) */
+        }
+
+        /* Text Decoration: line-through */
+        .text-line-through {
+            text-decoration: line-through;
+            /* text-decoration adds a line through the text */
+        }
+
+        /* Text Decoration: overline */
+        .text-overline {
+            text-decoration: overline;
+            /* text-decoration adds a line above the text */
+        }
+
+        /* Text Decoration: multiple */
+        .text-multiple {
+            text-decoration: underline overline;
+            /* text-decoration can combine multiple values */
+        }
+
+        /* Text Decoration Color and Style */
+        .text-red-wavy {
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+            /* text-decoration-color sets the color of the decoration */
+            /* text-decoration-style sets the style (solid, double, dotted, dashed, wavy) */
+        }
+
+        .text-yellow-wavy {
+            /* another way of applying text decoration in single line */
+            text-decoration: underline yellow dashed;
+            /* text-decoration-color sets the color of the decoration */
+            /* text-decoration-style sets the style (solid, double, dotted, dashed, wavy) */
+        }
+
+        /* Text Overflow */
+        /* text-overflow works with overflow: hidden and white-space: nowrap */
+        /*  */
+        .text-overflow-elipsis {
+            border: 1px solid black;
+            width: 40px;
+            text-overflow: ellipsis; /* text-overflow adds an ellipsis (...) when the text overflows its container */
+            overflow: hidden; /* overflow hides the overflowing text */ 
+        }
+        .text-overflow-clip {
+            border: 1px solid black;
+            width: 40px;
+            text-overflow: clip; /* text-overflow clips the overflowing text without adding ellipsis */
+            overflow: hidden; /* overflow hides the overflowing text */
+             
+        }
+        /* Word Break */
+        .word-break-breakall {
+            border: 1px solid black;
+            width: 40px;
+            word-break: break-all;
+            /* word-break allows breaking words at arbitrary points (other values: normal, keep-all) */
+        }
+        .word-break-keepall {
+            border: 1px solid black;
+            width: 40px;
+            word-break: keep-all;
+            /* word-break allows breaking words at arbitrary points (other values: normal, keep-all) */
+        }
+
+        /* Shorthand font property */
+        .font-shorthand {
+            font: italic small-caps bold 20px/30px 'Times New Roman', serif;
+            /* font shorthand: style variant weight size/line-height family */
+        }
+    </style>
+</head>
+
+<body>
+    <p class="font-family">This text uses Arial font-family.</p>
+
+    <p class="google-font-import">This text used Baloo font using "import function"</p>
+
+    <p class="google-font-link">This text used Poppins font using "link function"</p>
+
+    <p class="font-size">This text is 24px in size.</p>
+
+    <p class="font-weight">This text is bold.</p>
+
+    <p class="font-style">This text is italic.</p>
+
+    <p class="text-transform">This text is transformed to uppercase.</p>
+    <p class="font-variant">This text is in small-caps.</p>
+
+    <p class="line-height">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minima minus nisi asperiores molestias rerum repellat! Expedita accusamus doloribus quas maiores alias praesentium ad vel blanditiis unde distinctio amet sint fugit aliquid autem sit, dolorem exercitationem, rerum magnam. Voluptatibus rem cupiditate atque recusandae, quae, eveniet autem facilis corporis architecto aut neque, quaerat possimus ab fuga tempore? Reprehenderit beatae unde obcaecati illo quo commodi, libero fugiat, ipsam, ab ut saepe perferendis cum iure eum. Officia provident voluptatem laboriosam quis accusantium labore, aliquam perspiciatis at maiores aspernatur atque delectus numquam earum doloribus!</p>
+
+    <p class="text-underline">This text is underlined.</p>
+
+    <p class="text-line-through">This text has a line through it.</p>
+
+    <p class="text-overline">This text has an overline.</p>
+
+    <p class="text-multiple">This text has both underline and overline.</p>
+
+    <p class="text-red-wavy">This text has a red wavy underline.</p>
+
+    <p class="text-yellow-wavy">This text has a yellow wavy underline.</p>
+
+    <p class="text-overflow-elipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+    <p class="text-overflow-clip">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+    <p class="word-break-breakall">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+
+    <p class="word-break-keepall">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+
+    <p class="font-shorthand">This text uses the font shorthand property.</p>
+</body>
+
+</html>
