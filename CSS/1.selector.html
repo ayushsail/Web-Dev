@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+
+        /* Element selector - use to give all elements of div same style */
+        div{
+            color: blue;
+            background-color: lightgreen;
+        }
+
+        /* Class selector - use to give style with specific class and not all elements */
+        .class1{
+            color: red;
+            background-color: rgb(0, 231, 0);
+        }
+
+        /* ID selector - use to give style to a specific element with an ID */
+        #id1{
+            color: white;
+            background-color: black;
+        }
+
+        /* Child selector - use to give style to child element of main father element */
+        div > p {
+            color: yellow;
+            background-color: purple;
+        }
+
+        /* Descendant selector - use to give style to an element inside the main element irrespective of it hirerachy*/
+        div h1 {
+            color: orange;
+            background-color: pink;
+        }
+
+        /* Universal selector - use to give style to all elements */
+        * {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        /* Pseudo selector */
+        a:visited { /* visited link */
+            color: black;
+        }
+        a:link { /* unvisited link */
+            color: green;
+        }
+        a:active { /* when you click on link bg color appears */
+            background-color: grey;
+        }
+        a:hover { /* when you hover over link */
+            color: red;
+            background-color: yellow;;
+            text-decoration: underline;
+
+        }
+        main p:first-child { /* first child of div */
+            color: black;
+            background-color: rgb(230, 230, 162);
+        }
+        main p:nth-child(2) { /* style given to nth child of main */
+            color: black;
+            background-color: rgb(162, 230, 230);
+        }
+
+        /* attribute selector */
+        [data=a] {
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>I am a First div</div>
+
+    <div class="class1">I am a Second div</div>
+
+    <div id="id1">I am a Third div</div>
+
+    <div >
+        <p>I am first child of fourth div</p>
+    </div>
+
+    <div >
+        <article>
+            <h1>I am heading of fifth div</h1>
+        </article>
+        
+    </div>
+
+    <a target="_blank" href="https://www.Google.com">Go to Google</a>
+    <a target="_blank" href="https://www.Facebook.com">Go to Facebook</a>
+    <a target="_blank" href="https://www.Youtube.com">Go to Youtube</a>
+    <a target="_blank" href="https://www.Instagram.com">Go to Instagram</a>
+
+    <main class="one">
+        <p>I am first child</p>
+        <p>I am second child</p>
+    </main>
+    <div data="a"> Attribute selector</div>
+
+</body>
+</html>
