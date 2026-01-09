@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specificity</title>
     <style>
-        h1{
-            color:blue;
+        h1 {
+            color: blue;
         }
-        .yellow{
-            color:yellow;
+
+        .yellow {
+            color: yellow;
         }
-        .green{
-            color:green;
+
+        .green {
+            color: green;
         }
-        .red{
-            color:red;
+
+        .red {
+            color: red;
         }
-        h2{
+
+        h2 {
             color: blue !important;
         }
     </style>
 </head>
+
 <body>
     <!-- important > inline style > ID selectors > class selectors or attribute selectores > element slectors > universal selector > user agent style-->
-     <!-- user agent style - style sheet applied by browser as default if none applied by user -->
+    <!-- user agent style - style sheet applied by browser as default if none applied by user -->
     <!-- within class selectors, the last one takes the win -->
     <h1 class="yellow green red">Hirerchy of Specificity</h1>
     <h1 style="color:greenyellow" class="yellow green red">Hirerchy of Specificity</h1>
     <h2 style="color:greenyellow" class="yellow green red">Hirerchy of Specificity</h2>
 
     <!-- how to calculate specificity -->
-     <!--
+    <!--
       universal selector - 0
       element selector - 1
       class selector / attribute selector / pseduo classes - 10
@@ -40,6 +46,7 @@
       important - 10000
        -->
 
-    <a href="https://www.codewithharry.com/tutorial/css-specificity">Specificity</a>
+    <a href="https://www.codewithharry.com/tutorial/css-specificity" target="_blank">Specificity</a>
 </body>
+
 </html>
