@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling List</title>
+    <style>
+        .list1 {
+            list-style: devanagari;
+            /* use inspect to see more styles of marker */
+            list-style-position: outside;
+            /* all the style will be applied only to list items not the marker  */
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        .list2 {
+            list-style: devanagari;
+            /* use inspect to see more styles of marker */
+            list-style-position: inside;
+            /* all the style will be applied only to list items not the marker  */
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        .list3 {
+            list-style-type: "😊";
+            /* to add eoji as marker */
+        }
+
+        .list4 {
+            list-style-position: inside;
+            list-style-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTMzNGp5dHdzd3JqbTFyOWtuaTh3bmRhczNscHI2bXZna2kzY3ZsNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IRFQYGCokErS0/giphy.webp);
+            /* to add images as marker */
+        }
+
+        nav ul li {
+            list-style-type: none;
+
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- how to create a nav bar -->
+    <nav>
+        <ul style="display: flex;">
+            <!--display flex is always applied to <ul> of <nav> tag and not in the class of it-->
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+
+    <nav class="box">
+        <ul>
+            <li class="list1">HOME</li>
+            <li class="list1">ABOUT</li>
+            <li class="list1">CONTACT</li>
+        </ul>
+    </nav>
+    <nav class="2">
+        <ul>
+            <li class="list2">HOME</li>
+            <li class="list2">ABOUT</li>
+            <li class="list2">CONTACT</li>
+        </ul>
+    </nav>
+    <nav class="3">
+        <ul>
+            <li class="list3">HOME</li>
+            <li class="list4">ABOUT</li>
+        </ul>
+    </nav>
+
+
+    <!-- https://www.codewithharry.com/tutorial/css-list-styles -->
+
+</body>
+
+</html>

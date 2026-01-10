@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box1{
+            border: 1px solid black;
+            width: 10vw;
+            height: 20vh;
+            overflow: scroll; /* vertical & horizontal scrollbar will always be visible */
+        }
+        .box2{
+            border: 1px solid black;
+            width: 10vw;
+            height: 20vh;
+            overflow: auto; /* if it overflows, the scrollbar will be visible */
+        }
+        .box3{
+            border: 1px solid black;
+            width: 10vw;
+            height: 20vh;
+            overflow: auto; /* if it overflows, the scrollbar will not be visible */
+            white-space: nowrap; /* all text will be written in one line, it do not fall down */
+        }
+        .box4{
+            border: 1px solid black;
+            width: 10vw;
+            height: 20vh;
+            overflow: hidden; /* any change in overflow property will not affect below two lines whether it be scroll, auto or hidden */
+            white-space: nowrap; /* all text will be written in one line, it do not fall down */
+            text-overflow: ellipsis; /* if it overflows, the scrollbar will not be visible, there will be dots */
+        }
+        .box5{
+            border: 1px solid black;
+            width: 10vw;
+            height: 20vh;
+            overflow: clip; /* disables progmatically scrolling, you can't disable */
+        }
+        .box6{
+            border: 1px solid black;
+            width: 10vw;
+            height: 20vh;
+            /* individually controlling overflow */
+            overflow-x: hidden; /* disables horizontally scrolling */
+            overflow-y: scroll; /* enables vertically scrolling */
+            /* it can also be done in one line */
+            /* first one for x second one for y */
+            overflow: hidden scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dicta error, voluptatum amet sequi rem, fugit recusandae, facilis sed neque dolores debitis minima? Excepturi natus tempora labore aut? Nulla possimus nam suscipit, nihil voluptatem sunt, alias error, tempora quas voluptas fugiat dolorum quaerat eveniet quasi unde ullam laudantium adipisci nisi officiis dolores fugit recusandae! Minus alias quia iure expedita! Incidunt saepe dignissimos sapiente, nulla unde, adipisci necessitatibus, dicta doloribus ullam commodi explicabo ut itaque. Dicta rem eligendi dignissimos optio harum, aut fugiat ex earum error possimus iusto deserunt ea corrupti non accusamus facere pariatur nisi quis! In totam est molestias quo voluptatem corporis dolor nisi veniam odio minima libero, ipsum quia optio placeat voluptatibus illum hic rem aspernatur. Quasi veritatis quaerat quia corrupti omnis placeat exercitationem illo eius autem laudantium, doloribus, iusto, fuga repellat debitis sequi? Accusamus, ducimus quo sit voluptates eius debitis a cumque ipsa accusantium tempora sed incidunt.</div>
+    <div class="box2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dicta error, voluptatum amet sequi rem, fugit recusandae, facilis sed neque dolores debitis minima? Excepturi natus tempora labore aut? Nulla possimus nam suscipit, nihil voluptatem sunt, alias error, tempora quas voluptas fugiat dolorum quaerat eveniet quasi unde ullam laudantium adipisci nisi officiis dolores fugit recusandae! Minus alias quia iure expedita! Incidunt saepe dignissimos sapiente, nulla unde, adipisci necessitatibus, dicta doloribus ullam commodi explicabo ut itaque. Dicta rem eligendi dignissimos optio harum, aut fugiat ex earum error possimus iusto deserunt ea corrupti non accusamus facere pariatur nisi quis! In totam est molestias quo voluptatem corporis dolor nisi veniam odio minima libero, ipsum quia optio placeat voluptatibus illum hic rem aspernatur. Quasi veritatis quaerat quia corrupti omnis placeat exercitationem illo eius autem laudantium, doloribus, iusto, fuga repellat debitis sequi? Accusamus, ducimus quo sit voluptates eius debitis a cumque ipsa accusantium tempora sed incidunt.</div>
+    <div class="box3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dicta error, voluptatum amet sequi rem, fugit recusandae, facilis sed neque dolores debitis minima? Excepturi natus tempora labore aut? Nulla possimus nam suscipit, nihil voluptatem sunt, alias error, tempora quas voluptas fugiat dolorum quaerat eveniet quasi unde ullam laudantium adipisci nisi officiis dolores fugit recusandae! Minus alias quia iure expedita! Incidunt saepe dignissimos sapiente, nulla unde, adipisci necessitatibus, dicta doloribus ullam commodi explicabo ut itaque. Dicta rem eligendi dignissimos optio harum, aut fugiat ex earum error possimus iusto deserunt ea corrupti non accusamus facere pariatur nisi quis! In totam est molestias quo voluptatem corporis dolor nisi veniam odio minima libero, ipsum quia optio placeat voluptatibus illum hic rem aspernatur. Quasi veritatis quaerat quia corrupti omnis placeat exercitationem illo eius autem laudantium, doloribus, iusto, fuga repellat debitis sequi? Accusamus, ducimus quo sit voluptates eius debitis a cumque ipsa accusantium tempora sed incidunt.</div>
+    <div class="box4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dicta error, voluptatum amet sequi rem, fugit recusandae, facilis sed neque dolores debitis minima? Excepturi natus tempora labore aut? Nulla possimus nam suscipit, nihil voluptatem sunt, alias error, tempora quas voluptas fugiat dolorum quaerat eveniet quasi unde ullam laudantium adipisci nisi officiis dolores fugit recusandae! Minus alias quia iure expedita! Incidunt saepe dignissimos sapiente, nulla unde, adipisci necessitatibus, dicta doloribus ullam commodi explicabo ut itaque. Dicta rem eligendi dignissimos optio harum, aut fugiat ex earum error possimus iusto deserunt ea corrupti non accusamus facere pariatur nisi quis! In totam est molestias quo voluptatem corporis dolor nisi veniam odio minima libero, ipsum quia optio placeat voluptatibus illum hic rem aspernatur. Quasi veritatis quaerat quia corrupti omnis placeat exercitationem illo eius autem laudantium, doloribus, iusto, fuga repellat debitis sequi? Accusamus, ducimus quo sit voluptates eius debitis a cumque ipsa accusantium tempora sed incidunt.</div>
+    <div class="box5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dicta error, voluptatum amet sequi rem, fugit recusandae, facilis sed neque dolores debitis minima? Excepturi natus tempora labore aut? Nulla possimus nam suscipit, nihil voluptatem sunt, alias error, tempora quas voluptas fugiat dolorum quaerat eveniet quasi unde ullam laudantium adipisci nisi officiis dolores fugit recusandae! Minus alias quia iure expedita! Incidunt saepe dignissimos sapiente, nulla unde, adipisci necessitatibus, dicta doloribus ullam commodi explicabo ut itaque. Dicta rem eligendi dignissimos optio harum, aut fugiat ex earum error possimus iusto deserunt ea corrupti non accusamus facere pariatur nisi quis! In totam est molestias quo voluptatem corporis dolor nisi veniam odio minima libero, ipsum quia optio placeat voluptatibus illum hic rem aspernatur. Quasi veritatis quaerat quia corrupti omnis placeat exercitationem illo eius autem laudantium, doloribus, iusto, fuga repellat debitis sequi? Accusamus, ducimus quo sit voluptates eius debitis a cumque ipsa accusantium tempora sed incidunt.</div>
+    <div class="box6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dicta error, voluptatum amet sequi rem, fugit recusandae, facilis sed neque dolores debitis minima? Excepturi natus tempora labore aut? Nulla possimus nam suscipit, nihil voluptatem sunt, alias error, tempora quas voluptas fugiat dolorum quaerat eveniet quasi unde ullam laudantium adipisci nisi officiis dolores fugit recusandae! Minus alias quia iure expedita! Incidunt saepe dignissimos sapiente, nulla unde, adipisci necessitatibus, dicta doloribus ullam commodi explicabo ut itaque. Dicta rem eligendi dignissimos optio harum, aut fugiat ex earum error possimus iusto deserunt ea corrupti non accusamus facere pariatur nisi quis! In totam est molestias quo voluptatem corporis dolor nisi veniam odio minima libero, ipsum quia optio placeat voluptatibus illum hic rem aspernatur. Quasi veritatis quaerat quia corrupti omnis placeat exercitationem illo eius autem laudantium, doloribus, iusto, fuga repellat debitis sequi? Accusamus, ducimus quo sit voluptates eius debitis a cumque ipsa accusantium tempora sed incidunt.</div>
+</body>
+</html>

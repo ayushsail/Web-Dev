@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Porperty</title>
+    <style>
+        .box1{
+            border: 1px solid black;
+            display: inline; /* width, margin, padding doesn't work here */
+            width: 100px; 
+            padding: 20px;
+            margin: 20px;
+        }
+        .box2{
+            display: inline-block;
+            border: 1px solid black;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .box3{
+            display: block;
+            border: 1px solid black;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .inlineflex{
+            display: inline flex;
+            justify-content: center;
+            border: 1px solid black;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .display{
+            display: none; /* hide the box and space */
+        }
+        .visibility{
+            visibility: hidden; /* hide the box but space remains */
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- just change the class to see differences -->
+    <div class="box2">BOX 1</div>
+    <div class="box2">BOX 2</div>
+    <span class="box3 display visibility">BOX 3</span> <!-- just remove the class to see differences -->
+    <span class="box3">BOX 4</span>
+    <div class="inlineflex flex">BOX 5</div> <!-- just remove the class to see differences -->
+    <div class="inlineflex flex">BOX 6</div> <!-- just remove the class to see differences -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display -->
+</body>
+</html>

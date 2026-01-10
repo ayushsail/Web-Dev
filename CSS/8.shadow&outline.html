@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outline</title>
+    <style>
+/* SHADOWS */
+        .box1 {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 100px;
+            box-shadow: h-offset v-offset blur spread color inset;
+            box-shadow: 10px 10px 5px grey;
+            /* 
+            h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+            blur: The larger the value, the blurrier the shadow.
+            spread: Expands or shrinks the shadow size.
+            color: Defines the shadow color.
+            inset: Makes the shadow inner bydefault is outset */
+        }
+
+        .text {
+            text-shadow: h-offset v-offset blur color;
+            /* 
+            h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+            blur: The larger the value, the blurrier the shadow.
+            color: Defines the shadow color. */
+            text-shadow: 2px 2px 5px red;
+        }
+/* OUTLINES */
+        .box21 {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 100px;
+            outline: width style color;
+            /* 
+            width: The thickness of the outline.
+            style: The style of the outline (solid, dotted, dashed, double,groove,ridge, inset, outset).
+            color: The color of the outline. */
+            outline: 1px solid red;
+            border-radius: 10px; /*the radius border is followed by outline*/ 
+            outline-offset: 5px; /*it controls the size of outline*/
+        }
+        .box22 {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 100px;
+            outline: 1px dotted red;
+            border-radius: 10px;
+            outline-offset: 5px;
+        }
+        .box23 {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 100px;
+            outline: 1px dashed red;
+            border-radius: 10px;
+            outline-offset: 5px;
+        }
+        .box24 {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 100px;
+            outline: 1px double red;
+            border-radius: 10px;
+            outline-offset: 5px;
+        }
+        .glow {
+            font-size: 40px;
+            color: white;
+            text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">SHADOWS</div>
+    <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis velit saepe necessitatibus iure
+        provident laborum aliquam hic quasi dignissimos porro. Totam fuga quo dignissimos laborum aspernatur pariatur
+        aliquid fugit minima temporibus, eaque enim voluptate iusto voluptas alias ad ipsam, excepturi possimus itaque
+        aperiam? Itaque ad ut iste, nam laudantium optio?</p>
+    <div class="box21">OUTLINES</div>
+    <div class="box22">OUTLINES</div>
+    <div class="box23">OUTLINES</div>
+    <div class="box24">OUTLINES</div>
+    <div class="box25">OUTLINES</div>
+
+    <div class="glow">GLOW</div>
+
+    <!-- https://www.codewithharry.com/tutorial/css-shadows -->
+
+</body>
+
+</html>
