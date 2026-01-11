@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+            width: 80vw;
+            height: 50vh;
+            background-color: #e8e8e8;
+
+            /* transform, filter or perspective properties can also make an element appear positioned */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            /* perspective: 0em; */
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+            width: 78.5vw;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 
+           1. STICKY
+           - We put this directly in the body so it sticks for the whole page.
+           - It acts like Relative (takes up space) until you scroll past its trigger point.
+           - Then it acts like Fixed (sticks to screen).
+        */
+        .box1 {
+            background-color: orange;
+            position: sticky;
+            /* it will stick to the top when you scroll down */
+            top: 20px;
+            /* Sticks when it reaches 20px from the top */
+            width: 20vw;
+            z-index: 10;
+        }
+
+        /* 
+           2. RELATIVE
+           - Positioned relative to where it WOULD be normally.
+           - Leaves a ghost space behind.
+        */
+        .box3 {
+            background-color: green;
+            position: relative;
+            top: 140px;
+            /* top or bottom */
+            left: 100px;
+            /* left or right */
+            z-index: 1;
+            /* use to change the layer level */
+        }
+
+        .box4 {
+            background-color: blue;
+            position: relative;
+            bottom: 60px;
+            /* top or bottom */
+            right: 70px;
+            /* left or right */
+        }
+
+        /* 
+           3. ABSOLUTE
+           - Removed from normal flow.
+           -  the position will be relative to the nearest positioned ancestor  
+        */
+        .box5 {
+            background-color: yellow;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .absolute {
+            position: relative;
+        }
+
+        .box6 {
+            background-color: purple;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        /* 
+           4. FIXED
+           - Positioned relative to the viewport (browser window).
+           - Leaves no ghost space behind.
+        */
+        .box7 {
+            background-color: orange;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            width: 321px;
+            height: 81px;
+        }
+
+        .box8 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. STICKY -->
+    <div class=" box box1">STICK TO THE TOP</div>
+
+    <div class="parent">
+    </div>
+
+
+
+    <!-- 2. RELATIVE -->
+    <div class="parent">
+        <div class=" box box3">RELATIVE</div>
+        <div class=" box box4">RELATIVE</div>
+    </div>
+
+
+
+    <!-- 3. ABSOLUTE -->
+    <div class="parent">
+        <div class=" box box5">ABSOLUTE(relativet to nearest positioned parent - body)</div>
+    </div>
+    <div class="parent absolute">
+        <div class=" box box6">ABSOLUTE(relative to nearest positioned parent - div)</div>
+    </div>
+
+
+
+    <!-- 4. FIXED -->
+    <div class="parent">
+        <div class=" box box7">FIXED</div>
+    </div>
+</body>
+
+</html>
