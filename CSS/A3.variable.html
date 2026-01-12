@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <style>
+
+        /* define variable */
+         /* alternate color theme for whole website */
+        :root{          
+            --pcolor: #75f586;
+            --scolor: #048700;
+            --tcolor: #2ddf00;
+            --fcolor: #3cd300;
+            /* also use for opacity, padding */
+            --defop: 0.2;
+            --defpad: 14px
+        }
+/* Var() function not only hold color, it can hold background color, opacity, padding, margin, border and many more things */
+/* Everything that you change at many different places can be use as variable */
+
+         
+        /* ORIGINAL COLOR THEME */
+        /* .nav{
+            background-color: #75c6f5;
+        }
+        .list{
+            list-style: none;
+            display: flex;
+        }
+        ul li{
+            padding: 8px;
+        }
+        .heading{
+            color: #001d87;
+            background-color: #1eacff;
+        }
+        .content{
+            color: #002ed3;
+        } */
+
+
+
+        /* ALTERNATE COLOR THEME */
+        .nav{
+            background-color: var(--pcolor, #75c6f5); /* if variable is not found it will apply deflaut color written after the variable color */
+        }
+        /* if you comment the root function you will able to see the original default color */
+        .list{
+            list-style: none;
+            display: flex;
+        }
+        ul li{
+            opacity: var(--defop, 0.5);
+            padding: var(--defpad, 8px);
+        }
+        .heading{
+            color: var(--scolor, #001d87);
+            background-color: var(--tcolor, #1eacff);
+        }   
+        .content{
+            color: var(--fcolor, #002ed3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <ul class="list">
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+    <h1 class="heading">Mountain</h1>
+    <div class="content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quia, maxime voluptas eveniet id veniam, inventore saepe amet magnam architecto est odio corrupti odit et similique beatae sequi provident animi, debitis libero ex consectetur nisi temporibus quo. Dolore ad corrupti necessitatibus voluptate magni a cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, earum dolorem veniam, voluptatum blanditiis laborum corporis obcaecati ad ducimus repudiandae quisquam facere, corrupti vitae nesciunt perspiciatis illum officiis vel hic praesentium tenetur consequuntur unde. Nulla, pariatur nisi. Explicabo neque dolorum earum doloribus. Voluptates, ullam impedit.</p>
+    </div>
+
+    <a href="https://www.codewithharry.com/tutorial/css-variables" target="_blank">CSS Variables</a>
+    </body>
+</html>
