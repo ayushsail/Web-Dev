@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            display: flex;
+        }
+        .boxes{
+            width: 450px;
+            height: 450px;
+            padding: 2px;
+            margin: 2px;
+            background-color: antiquewhite;
+        }
+
+        /* sytnax */
+        /* @media not/only mediatype and (expressions){
+            CSS - styles;
+        } */
+
+        /* mediatype - screen, print, speech(for blind people), braille(for deff people), embossed, tty */
+
+
+        @media only screen and (max-width: 500px){
+            .box1{
+                color: red;
+            }
+            .box{
+                flex-direction: column;
+            }
+        }
+        @media only screen and (min-width: 500px){
+            .box2{
+                color: blue;
+            }
+        }
+        @media screen and (orientation: landscape){
+            .box3{
+                color: green;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">BOX 1</div>
+    <div class="box2">BOX 2</div>
+    <div class="box3">BOX 3</div>
+    <div class="box">
+        <div class="boxes">BOX 4</div>
+        <div class="boxes">BOX 5 </div>
+        <div class="boxes">BOX 6</div>
+    </div>
+
+    <a href="https://www.codewithharry.com/tutorial/css-media-queries">MEDIA QUERIES</a>
+</body>
+</html>
