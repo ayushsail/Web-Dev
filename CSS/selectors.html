@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORE ON SELECTORS</title>
+    <style>
+        /* Nth child selector */
+        .box:first-child {
+            color: lightcoral;
+        }
+
+        .box:nth-child(2):first-line {
+            background-color: blueviolet;
+
+        }
+
+        .box:nth-child(3):first-letter {
+            background-color: blueviolet;
+        }
+
+
+        /* Uinversal in a class */
+        .boxes * {
+            font-size: larger;
+        }
+
+
+        /* Attribute selector */
+        [data-color="primary"] {
+            color: blue;
+        }
+
+        [data-color="secondary"] {
+            color: red;
+        }
+
+
+        /* Nth child selector */
+        .thing:nth-child(even) {
+            color: green;
+        }
+
+        .thing:nth-child(odd) {
+            color: burlywood;
+        }
+
+        .thing:nth-last-child(1) {
+            color: rgb(174, 0, 255);
+        }
+
+
+        /* Pseudo elements */
+        /* before/after content - we can add content dynamically through CSS */
+        .something::before {
+            content: "I am before all the content";
+            background-color: red;
+        }
+
+        .something::after {
+            content: "I am after all the content";
+            background-color: red;
+        }
+
+
+        /* Selection - appears when you select any text */
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+
+        .everything::first-letter{
+            color: peru;
+            font-size: 30px;
+        }
+
+        /* Pseudo elements */
+        input::placeholder{
+            color: blue;
+        }
+        /* just to differentiate everything */
+        .boxes{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magnam porro quas reiciendis
+            reprehenderit illum omnis cumque maxime itaque odio. Ratione nobis obcaecati rem ea ipsam quam et quisquam
+            natus aperiam reiciendis harum voluptatibus aut eaque delectus laboriosam, error fugit perferendis vitae
+            consectetur libero facilis dolorem autem esse. Dicta, voluptate.</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magnam porro quas reiciendis
+            reprehenderit illum omnis cumque maxime itaque odio. Ratione nobis obcaecati rem ea ipsam quam et quisquam
+            natus aperiam reiciendis harum voluptatibus aut eaque delectus laboriosam, error fugit perferendis vitae
+            consectetur libero facilis dolorem autem esse. Dicta, voluptate.</div>
+        <div data-color="primary" class="box">if my data-color is primary then color is blue</div>
+        <div data-color="secondary" class="box">if my data-color is secondary then color is red</div>
+    </div>
+
+    <div class="boxes something">
+        <div class="thing"> I am odd</div>
+        <div class="thing"> I am even</div>
+        <div class="thing"> I am odd</div>
+        <div class="thing"> I am even</div>
+        <div class="thing"> I am first from last</div>
+    </div>
+
+    <div class=" boxes nothing">
+        <div class="everything">Once upon a time</div>
+        <div class="everything">Once upon a time</div>
+        <div class="everything">Once upon a time</div>
+    </div>
+
+    <div class="boxes">
+        <input type="text" placeholder="Enter your name">
+    </div>
+</body>
+
+</html>
