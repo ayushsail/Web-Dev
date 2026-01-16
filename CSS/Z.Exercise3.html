@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .nav {
+            height: 75px;
+            background-color: #3030ff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .main {
+            position: relative;
+            background-color: #6da8ee;
+            height: 130vh;
+        }
+
+        .box {
+            display: inline-block;
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            margin: 90px;
+            background-color: #ffd3d3;
+        }
+
+        .boxes {
+            display: inline-block;
+            position: absolute;
+            top: 40px;
+            left: 380px;
+        }
+
+        .wel {
+            border: 2px solid black;
+            position: absolute;
+            top: 710px;
+            left: 705px;
+            border-radius: 20px;
+            padding: 30px;
+
+        }
+
+        .footer {
+            height: 80px;
+            background-color: #ffbebe;
+        }
+
+        .logo {
+            position: fixed;
+            border-radius: 50%;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-color: #fbe995;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav"></nav>
+    <main class="main">
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="wel">
+            <h1>WELCOME TO MY WEBSITE</h1>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+    <div class="logo"></div>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <style>
+        .container0{
+            border: 2px solid black;
+            height: 460px;
+            margin: 10px;
+            background-color: #d1d1d1;
+        }
+        .items{
+            border: 2px solid black;
+            height: 70px;
+            width: 70px;
+            margin: 4px;
+            text-align: center;
+            background-color: #fffdb5;
+        }
+
+        /* CONTAINER PROPERTIES */
+
+        /* justify content & align items */
+        .container1{
+            display: flex; /* this div becomes flex box, under which elements are called flex items */
+            justify-content: center; /* used to align items along the main axis */
+            /* center, end, start, flex end, flex start left, right, normal, space-between, space-around, space-evenly */
+            align-items: center; /* used to align items along the cross axis */
+            /* center, end, start, flex end, flex start left, right, normal, space-between, space-around, space-evenly, baseline, stretch */
+        }
+
+        /* flex direction */
+        .container2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* align items in any direction you want */
+            /* row, column, row-reverse, column-reverse */ 
+            /* the main and cross axis changes according to the flex direction */
+            gap: 20px; /* it is used as a margin for itmes */
+        }
+
+        /* flex wrap & align content */
+        .container3{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* used to wrap the flex items */
+            /* wrap, nowrap, wrap-reverse, balance */
+            align-content: center; /* used to align items when they are in mulitple lines, here the items are in 3 lines */
+            /* center, end, start, flex end, flex start left, right, normal, space-between, space-around, space-evenly, baseline, stretch */
+            /* there is no justify-items property in flex box */
+            /* we can also give gap in this way */
+            row-gap: 4px;
+            column-gap: 20px;
+        }
+        /* flex flow */
+        .container4{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: center;
+            /* flex-flow: <flex-direction> <flex-wrap> */
+            flex-flow: column-reverse wrap; /* used to toggle both above properties */
+            /* we can also give gap in this way */
+            /* gap: <row gap> <column gap> */
+            gap: 4px 20px;
+        }
+
+        /* ITEMS PROPERTIES */
+
+        /* order */
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        .order-4{
+            order: 4;
+        }
+        .order-5{
+            order: 5;
+        }
+        .order-6{
+            order: 6;
+        }
+
+
+        /* flex-grow */
+        .item{
+            flex-grow: 1;
+        }
+        .items1{
+            flex-grow: 2; /* it will take space of two or more items */
+        }
+
+        /* flex-shrink */
+        .items2{
+            flex-shrink: 2; /* it will shrink 2x faster than other items */
+        }
+
+        /* align-self */
+        .items3{
+            align-self: flex-end;
+        }
+        .items4{
+            align-self: flex-start;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1 style="text-align: center; color: red;">NOTE - USE INSPECT TO SEE THE OTHER PROPERITIES</h1>
+
+        <h2 style="text-align: center;">JUSTIFY-CENTER & ALIGN ITEMS</h2>
+        <div class="container0 container1">
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+
+        <h2 style="text-align: center;">FLEX-DIRECTION</h2>
+        <div class="container0 container2">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+        </div>
+
+        <h2 style="text-align: center;">FLEX-WRAP & ALIGN-CONTENT</h2>
+        <div class="container0 container3">
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+            <div class="items"></div> <div class="items"></div> <div class="items"></div> <div class="items"></div>
+        </div>
+
+        <h2 style="text-align: center;">FLEX-FLOW</h2>
+        <div class="container0 container4">
+            <div class="items">1</div> <div class="items">2</div> <div class="items">3</div> <div class="items">4</div>
+            <div class="items">5</div> <div class="items">6</div> <div class="items">7</div> <div class="items">8</div>
+            <div class="items">9</div> <div class="items">10</div> <div class="items">11</div> <div class="items">12</div>
+            <div class="items">13</div> <div class="items">14</div> <div class="items">15</div> <div class="items">16</div>
+            <div class="items">17</div> <div class="items">18</div> <div class="items">19</div> <div class="items">20</div>
+            <div class="items">21</div> <div class="items">22</div> <div class="items">23</div> <div class="items">24</div>
+            <div class="items">25</div> <div class="items">26</div> <div class="items">27</div> <div class="items">28</div>
+        </div>
+
+        <h2 style="text-align: center;">ORDER</h2>
+        <div class="container0 container1">
+            <div class="items order-5">1</div>
+            <div class="items order-3">2</div>
+            <div class="items order-2">3</div>
+            <div class="items order-4">4</div>
+            <div class="items order-1">5</div>
+        </div>
+
+        <h2 style="text-align: center;">FLEX-GROW</h2>
+        <div class="container0 container1">
+            <div class="items items1"></div>
+            <div class="items item"></div>
+            <div class="items item"></div>
+            <div class="items item"></div>
+            <div class="items item"></div>
+            <div class="items item"></div>
+        </div>
+
+        <h2 style="text-align: center;">FLEX-SHRINK</h2>
+        <div class="container0 container1">
+            <div class="items items2"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+
+        <h2 style="text-align: center;">ALIGN-SELF</h2>
+        <div class="container0 container1">
+            <div class="items items3"></div>
+            <div class="items"></div>
+            <div class="items items4"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+    </main>
+    <img src="https://samanthaming.gumlet.io/flexbox30/4-flexbox-axes.jpg.gz" alt="image">
+    <img src="Z.image2.png" width="500px" alt="image">
+    <br>
+    <a href="https://www.codewithharry.com/tutorial/css-flexbox" style="color: red;">FLEX BOX</a>
+</body>
+</html>
