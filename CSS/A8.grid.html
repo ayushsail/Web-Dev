@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID PROPERTIES</title>
+    <style>
+        .container0 {
+            border: 2px solid black;
+            height: 400px;
+            margin: 10px;
+            background-color: #d1d1d1;
+            /* Default to grid for all examples, specific overrides in subclasses */
+            display: grid;
+        }
+
+        .items {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 2px;
+            text-align: center;
+            background-color: #fffdb5;
+            font-size: 1.2rem;
+        }
+
+        /* 1. GRID TEMPLATE ROWS & COLUMNS */
+        .container1 {
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+        }
+
+
+        /* 2. GRID ROW & GRID COLUMN */
+        .container2 {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .item-1 {
+            grid-row: 1 / 3; /* Start at row line 1, end at row line 3 */
+            grid-column: 1 / 3; /* Start at col line 1, end at col line 3 */
+            background-color: #ffb5b5;
+        }
+        .item-2 {
+            grid-row: 1 / 3; 
+            grid-column: 3 / 5;
+            background-color: #b5ffb5;
+        }
+        .item-3 {
+            /* another way of writing */
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            background-color: #b5b5ff;
+        }
+
+
+        /* 3. NAMING GRID LINES */
+        .container3 {
+            grid-template-rows: [row-start] 100px [row-mid] 100px [row-end];
+            grid-template-columns: [col-start] 100px [col-mid] 100px [col-end];
+            /* We cannot give number as a name */
+        }
+        .item-named {
+            /* Reference lines by name */
+            grid-row: row-start / row-end;
+            grid-column: col-start / col-end;
+            background-color: #ff000080;
+        }
+
+
+        /* 4. GRID TEMPLATE AREA */
+        .container4 {
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr 60px;
+            grid-template-areas: "nav nav"
+                                 "sidebar main"
+                                 "footer footer";
+        }
+        .nav {
+            grid-area: nav;
+            background-color: orange;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightblue;
+        }
+        .main {
+            grid-area: main;
+            background-color: white;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: lightgreen;
+        }
+
+        
+        /* 5. FR UNIT */
+        .container5 {
+            /* 1fr takes 1 part of available space, 2fr takes 2 parts, it divides equal number of parts  */
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+
+        /* 6. GAP */
+        .container6 {
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 20px; 
+            column-gap: 50px;
+            /* another way of writing */
+            /* gap: <row-gap> <column-gap> */
+            /* gap: 20px 50px; */
+        }
+
+
+        /* 7. Repeat Function */
+        .container7 {
+            /* Repeat 3 times, 1fr each */
+            grid-template-columns: repeat(3, 1fr);
+            /* Repeat 2 times, 50px each */
+            grid-template-rows: repeat(2, 50px);
+        }
+
+
+        /* 8. Minmax Function */
+        .container8 {
+            grid-template-columns: minmax(100px, 1fr) 200px;
+            /* Column 1 is min 100px, max 1fr. Column 2 is 200px fixed */
+        }
+
+        /* 9. JUSTIFY ITEMS & ALIGN ITEMS */
+        .container9 {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr; 
+            justify-items: center; /* Align items inside their grid cells in main axis */
+            /* start, end, center, stretch (default) */
+            align-items: center; /* Align items inside their grid cells in cross axis */
+            /* start, end, center, stretch (default) */
+        }
+
+
+        /* 10. Justify Content & Align Content */
+        .container10 {
+            grid-template-columns: 50px 50px;
+            grid-template-rows: 50px 50px;
+            height: 300px;
+            /* Container is larger than grid */
+            justify-content: center; /* Aligns the whole container in main axis */
+            /* start, end, center, space-between, etc. */
+            align-content: center; /* Aligns the whole container in cross axis */
+            /* start, end, center, space-between, etc. */
+        }
+
+        /* 11. Place Content */
+        .container11 {
+            grid-template-columns: 50px 50px;
+            grid-template-rows: 50px 50px;
+            /* place-content: <align-content> <justify-content> */
+            place-content: space-evenly center; /* use toggle both properties */
+            /* start, end, flex-end, flex-start, center, space-between, space-evenly, space-around, etc. */
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1 style="text-align: center; color: red;">NOTE - USE INSPECT TO SEE THE GRID LINES</h1>
+
+        <h2 style="text-align: center;">1. TEMPLATE ROWS & COLUMNS</h2>
+        <div class="container0 container1">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items">7</div>
+            <div class="items">8</div>
+            <div class="items">9</div>
+        </div>
+
+        <h2 style="text-align: center;">2. GRID ROW & COLUMN</h2>
+        <div class="container0 container2">
+            <div class="items item-1">Row 1-3 / Col 1-3</div>
+            <div class="items item-2">Row 1-3 / Col 3-5</div>
+            <div class="items item-3">Row 3-5 / Col 1-5</div>
+        </div>
+
+        <h2 style="text-align: center;">3. NAMING GRID LINES</h2>
+        <div class="container0 container3">
+            <div class="items item-named">Named Area</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+        </div>
+
+        <h2 style="text-align: center;">4. GRID TEMPLATE AREAS</h2>
+        <div class="container0 container4">
+            <div class="items nav">Navigation</div>
+            <div class="items sidebar">Sidebar</div>
+            <div class="items main">Main Content</div>
+            <div class="items footer">Footer</div>
+        </div>
+
+        <h2 style="text-align: center;">5. FR UNIT (1fr 2fr 1fr)</h2>
+        <div class="container0 container5">
+            <div class="items">1fr</div>
+            <div class="items">2fr</div>
+            <div class="items">1fr</div>
+            <div class="items">1fr</div>
+            <div class="items">2fr</div>
+            <div class="items">1fr</div>
+        </div>
+
+        <h2 style="text-align: center;">6. GAP (Row: 20px, Col: 50px)</h2>
+        <div class="container0 container6">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+        </div>
+
+        <h2 style="text-align: center;">7. REPEAT FUNCTION</h2>
+        <div class="container0 container7">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+        </div>
+
+        <h2 style="text-align: center;">8. MINMAX FUNCTION</h2>
+        <div class="container0 container8">
+            <div class="items">Min 100px, Max 1fr</div>
+            <div class="items">Fixed 200px</div>
+        </div>
+
+        <h2 style="text-align: center;">9. JUSTIFY-ITEMS & ALIGN-ITEMS</h2>
+        <div class="container0 container9">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+        </div>
+
+        <h2 style="text-align: center;">10. JUSTIFY-CONTENT & ALIGN-CONTENT</h2>
+        <div class="container0 container10">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+        </div>
+
+        <h2 style="text-align: center;">11. PLACE-CONTENT</h2>
+        <div class="container0 container11">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+        </div>
+        <img src="https://tutorial.techaltum.com/images/css-grids.jpg" width="400px" alt="image">
+        <br>
+        <img src="https://cdn.mos.cms.futurecdn.net/7vpUPMSbPfhxiUNYj5XnE6.jpg" width="400px" alt="image">
+        <br>
+        <img src="https://i.redd.it/1ja49d3svo191.png" width="400px" alt="image">
+        <br>
+        <a href="https://www.codewithharry.com/tutorial/css-grid" target="_blank">CSS GRID</a>
+    </main>
+</body>
+</html>
