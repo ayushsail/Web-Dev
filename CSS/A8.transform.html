@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 2px;
+            text-align: center;
+        }
+        .container{
+            border: 2px solid black;
+            width: 99vw;
+            height: 250px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            background-color: lightgrey;
+        }
+        .box{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: lightyellow;
+            
+        }
+        /* 1. ROTATION */
+        .box1{transform: rotate(45deg);}
+
+        /* 0.25turn = 90deg, 0.5turn = 180deg, 0.75turn = 270deg, 1turn = 360deg */
+        .box2{transform: rotate(0.75turn);}
+
+        /* Rotation along X Y Z axis */
+        /* comment any two of this to see changes */
+        .box3{transform: rotateX(50deg);}
+        .box3{transform: rotateY(50deg);}
+        .box3{transform: rotateZ(50deg);}
+
+        /* 3D rotation */
+        .box4{transform: rotate3d(1, 1, 1, 50deg);} /* 0 or 1 changes value and same angle will apply for every axis with 1 */
+        /* 3D rotation along X Y Z axis */
+        .box5{transform: rotateX(23deg) rotateY(50deg) rotateZ(10deg);}
+
+
+        /* 2. SCALE */
+        .box6{transform: scale(2);}
+
+        /* scaling in X Y Z axis */
+        /* comment any two of this to see changes */
+        .box7{transform: scaleX(2);}
+        .box7{transform: scaleY(2);}
+        .box7{transform: scaleZ(2);}
+
+        /* 3D Scaling */
+        .box8{transform: scale3d(2, 2, 2);}
+        /* another way of writing */
+        .box9{transform: scaleX(2) scaleY(2) scaleZ(2);}
+
+
+        /* 3. SKEW */
+        .box10{transform: skew(20deg);}
+        /* skew in X Y axis */
+        .box11{transform: skewX(20deg);}
+        .box11{transform: skewY(20deg);}
+        /* skew in X Y both combined axis */
+        /* skew is can not applied in Z axis */
+        .box12{transform: skew(20deg, 20deg);}
+
+
+        /* 4. TRANSLATION */
+        .box13{transform: translate(130px);}
+        /* translation in % */
+        .box14{transform: translate(-100%);}  /* it will move 100% of it's width */
+        /* translation in X Y Z axis */
+        .box15{transform: translateX(20px);}
+        .box15{transform: translateY(20px);}
+        .box15{transform: translateZ(20px);}
+        /* .box15{transform: translateX(20px) translateY(20px) translateZ(20px);} */
+        /* translation in all X Y Z axis */
+        .box16{transform: translate3d(50px, -40px, 50px);}
+
+
+        /* 5. ORIGIN */
+        .box17{transform: rotate(60deg);}
+        .box17{transform-origin: 0% 0%;} /* it will rotate from decided origin */
+
+        </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: red;">NOTE - USE INSPECT TO SEE THE CHANGES</h1>
+
+    <h2>1.Rotation</h2>
+    <div class="container">
+        <div class="box box1">45deg</div>
+        <div class="box box2">0.75turn</div>
+        <div class="box box3">X-Y-Z rotation</div>
+        <div class="box box4">3D rotation</div>
+        <div class="box box5">3D rotation along X Y Z axis</div>
+    </div>
+
+    <h2>2. Scaling</h2>
+    <div class="container">
+        <div class="box box6">Scaling</div>
+        <div class="box box7">Scaling in X Y Z axis</div>
+        <div class="box box8">3D Scaling</div>
+        <div class="box box9">3D Scaling</div>
+    </div>
+
+    <h2>3. Skew</h2>
+    <div class="container">
+        <div class="box box10">20deg skew</div>
+        <div class="box box11">skew in X Y</div>
+        <div class="box box12">skew in X & Y</div>
+    </div>
+
+    <h2>4. Translation</h2>
+    <div class="container">
+        <div class="box box13">130px translation</div>
+        <div class="box box14">-100% translation</div>
+        <div class="box box15">X-Y-Z translation</div>
+        <div class="box box16">3D translation</div>
+    </div>
+    
+    <h2>5. Origin</h2>
+    <div class="container">
+        <div class="box box17">60deg rotation at origin</div>
+    </div>
+</body>
+</html>
