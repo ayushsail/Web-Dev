@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSITION</title>
+    <style>
+        .container1{
+            border: 2px solid black;
+            background-color: lightgrey;
+            height: 400px;
+            width: 98vw;
+            margin: 8px 0px 8px 0px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .container2{
+            border: 2px solid black;
+            background-color: lightgrey;
+            height: 400px;
+            width: 98vw;
+            margin: 8px 0px 8px 0px;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        .box1{
+            border: 2px solid black;
+            background-color: lightyellow;
+            margin: 2px;
+            height: 100px;
+            width: 100px;
+            /* there are 4 transition properties */
+            transition-property: transform, background-color; /* which property to transition, name of the property or "all" to apply all */
+
+            transition-duration: 2s; /* how long the transition takes */
+
+            transition-timing-function: ease-in-out; /* how the transition behaves */
+            /* ease-in-out, ease-in, ease-out, linear, cubic-bezier() */
+
+            transition-delay: 1s; /* delay before the transition starts */
+
+            
+        }
+        .tr1{
+            transform: translateX(91vw) scale(140%);
+            background-color: aqua; 
+        }
+
+        .box2{
+            border: 2px solid black;
+            background-color: lightyellow;
+            margin: 2px;
+            height: 100px;
+            width: 100px;
+            /* all four properties in one line */
+            /* transition: <property> <duration> <timing-function> <delay>; */
+            transition: all 2s ease-in-out 1s;
+        }
+        .tr2{
+            transform: translateX(-91vw) scale(140%);
+            background-color: aqua; 
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="color: red; text-align: center;">USE INSPECT TO SEE TIMING FUNCTION, BY REMOVING OR ADDING CLASS, YOU CAN SEE TRANISTION</h1>
+    <div class="container1">
+        <div class="box1 tr1"></div>
+    </div>
+    <div class="container2">
+        <div class="box2 tr2"></div>
+    </div>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition">MDN TRANSITION</a><br><br>
+    <a href="https://www.codewithharry.com/tutorial/css-transitions">CODEWITHHARRY TRANSITION</a>
+</body>
+</html>
