@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: lightgrey;
+            position: relative;
+            width: 99vw;
+            height: 600px;
+        }
+        .ball{
+            border: 2px solid black;
+            border-radius: 50%; 
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: y 0.5s infinite ease-out alternate, x 3s infinite linear alternate;
+            /* new thing learned - you can apply two animation using coma */
+        }
+        @keyframes y {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 80%;
+            }
+        }
+        @keyframes x {
+            from{
+                left: 0;
+            }
+            to{
+                left: 94.6%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: rgb(12, 178, 233);">THE BOUNCING BALL</h1>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
