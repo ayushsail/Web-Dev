@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATION</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container {
+            border: 2px solid black;
+            background-color: lightgrey;
+            height: 500px;
+            width: 98vw;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .box {
+            border: 2px solid black;
+            background-color: lightyellow;
+            height: 100px;
+            width: 100px;
+            margin: 2px;
+        }
+
+        /* 1. ANIMATION */
+        .box1 {
+            animation-name: anymotion;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: 5;
+            /* repeate the animation for given times */
+            /* infinite - repeate the animation for infinite times */
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes anymotion {
+            from {
+                background-color: lightyellow;
+                transform: scale(10%) rotate(0.75turn);
+            }
+
+            to {
+                transform: translateX(1000px) translateY(300px) rotate(1turn) scale(200%);
+                background-color: lightgreen;
+            }
+        }
+
+
+        /* 2. DIRECTION */
+        .box2 {
+            /* you can also write in this way */
+            /* animation: name duration delay timing-function iteration-count direction fill-mode play-state shorthand; */
+            animation: direction 2s 1s ease-in-out infinite;
+            animation-direction: alternate;
+            /* normal, reverse, alternate, alternate-reverse */
+        }
+        @keyframes direction {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(1700px);
+            }
+        }
+
+
+        /* 3. PLAYSTATE */
+        .box3 {
+            animation: playstate 2s 1s ease-in-out infinite alternate;
+            /* animation : name duration delay timing-function iteration-count direction */
+            animation-play-state: running;
+            /* running, paused */
+        }
+        @keyframes playstate {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(396px);
+            }
+        }
+
+        /* 4. FILL-MODE */
+        .box4 {
+            animation: fillmode 5s 2s ease-in-out normal;
+            animation-fill-mode: forwards;
+            /* none, 
+            forwards - it will stay in final state, 
+            backwards - it will stay in initial state, 
+            both - final + initial */
+        }
+        @keyframes fillmode {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: blue;
+                transform: translateX(1700px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red ; text-align: center;">USE INSPECT TO SEE PROPPERTIES AND CHANGES</h1>
+    <h1>1. ANIMATION</h1>
+    <div class="container">
+        <div class="box box1"></div>
+    </div>
+
+    <h1>2. DIRECTION</h1>
+    <div class="container">
+        <div class="box box2"></div>
+    </div>
+
+    <h1>3. PLAYSTATE</h1>
+    <div class="container">
+        <div class="box box3"></div>
+    </div>
+
+    <h1>4. FILL-MODE</h1>
+    <div class="container">
+        <div class="box box4"></div>
+    </div>
+    <br><br>
+
+    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation" >MDN ANIMATION</a>
+    <br><br>
+    <a target="_blank" href="https://www.codewithharry.com/tutorial/css-animations?gad_source=1&gad_campaignid=23376876875&gbraid=0AAAAAqQsM_1V0hRkXOz-piEh3hDsU6cgZ&gclid=Cj0KCQiA1czLBhDhARIsAIEc7uhxxl_ZqbN4V_WRX7nP0P4v2sAMIlxNBKhoWnHWJYTIc302S5PkrS4aAnGjEALw_wcB">CODEWITHHARRY ANIMATION</a>
+</body>
+
+</html>
