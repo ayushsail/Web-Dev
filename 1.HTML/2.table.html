@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRICKET SCORECARD</title>
+    <style> /* CSS styles for the table */
+    table, th, td /* CSS styles for the table, header cells, and data cells */
+    { 
+        border: 1px solid black; /* border: 1px solid black; adds a solid border around the table, header cells, and data cells */
+        border-collapse: collapse; /* border-collapse: collapse; merges the borders of the table */
+    }
+    </style>
+</head>
+<body>
+    <table style="text-align: center;">
+        <caption>PLAYERS SCORECARD</caption> <!-- caption tag : title of the table -->
+        <thead> <!-- thead tag : header of the table -->
+            <tr> <!-- tr tag : row of the table -->
+                <th>NAME</th> <!-- th tag : header cell of the table -->
+                <th>RUNS</th>
+                <th>BALLS</th>
+            </tr>
+        </thead>
+        <tbody> <!-- tbody tag : body of the table -->
+            <tr> 
+                <td>SACHIN</td> <!-- td tag : cell of the table -->
+                <td rowspan="2">280</td> <!-- rowspan attribute : merges to row -->
+                <td rowspan="2">130</td>
+            </tr>
+            <tr>
+                <td>ROHIT</td>
+            </tr>
+            <tr>
+                <td>VIRAT</td>
+                <td>60</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>SAM</td>
+                <td>120</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- tfoot tag : footer of the table -->
+            <tr>
+                <td>TOTAL</td>
+                <td>460</td>
+                <td>244</td>
+            </tr>
+            <tr>
+                <td colspan="3">THE END !!!!</td> <!-- colspan attribute : merges to column -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
+
