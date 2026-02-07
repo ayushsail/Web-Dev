@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT FIT & COVER</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 400px;
+            width: 400px;
+            margin: 10px;
+        }
+
+        /* 1. COVER - it will cover the img by croping it in given size */
+        /* by default properity is fill, the object will fill the container by distorting the image */
+        .img1 {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* 2. CONTAIN - it will fit the img in given size without cropint it, but can leave empty space in container */
+        .img2 {
+            width: 400px;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        /* 3. OBJECT-POSITION - it will crop the image in given size and given position  */
+        /* bottom right, top left, center, top right, bottom left */
+        .img3 {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            object-position: bottom right;
+            /* can also be written as */
+            /* object-position: 20px 20px; */
+        }
+
+        /* 4. BACKGROUND-IMAGE */
+        .background-image {
+            background-image: url('https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640773.jpg&fm=jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* if the image is small in size it will repeat to fill the gaps */
+            /* no-repeat, repeat, repeat-x, repeat-y */
+            background-clip: border-box;
+            /* border-box, padding-box, content-box */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: red;">USE INSPECT TO SEE THE CHANGES</h1>
+    <h1>1. OBJECT FIT</h1>
+    <div class="container">
+        <img class="img1"
+            src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640773.jpg&fm=jpg"
+            alt="images">
+    </div>
+    <h1>2. OBJECT CONTAIN</h1>
+    <div class="container">
+        <img class="img2"
+            src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640773.jpg&fm=jpg"
+            alt="images">
+    </div>
+    <h1>3. OBJECT POSITION</h1>
+    <div class="container">
+        <img class="img3"
+            src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640773.jpg&fm=jpg"
+            alt="images">
+    </div>
+    <h1>4. BACKGROUND IMAGE</h1>
+    <div class="container background-image"></div>
+</body>
+
+</html>
