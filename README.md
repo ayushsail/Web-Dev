@@ -52,4 +52,4 @@ Real-world application of skills.
 *   Backend Integration (**Node.js**).
 
 ---
-*Created with passion by [Ayush Sail](https://github.com/ayushsail)*
+*Built with passion by [Ayush Sail](https://github.com/ayushsail)*
