@@ -27,11 +27,6 @@ Styling, layout, and responsive design.
 *   **Visuals:** Colors, Typography, Shadows, and Outlines.
 *   **Responsive Units:** Using `px`, `em`, `rem`, `vh`, `vw`.
 
-### 📂 Projects & Portfolio
-Real-world application of skills.
-*   **Portfolio Pages:** Home, Education, Experience, Projects.
-*   **Components:** Navigation bars, Cards, Footers.
-
 ## 🚀 Getting Started
 
 1.  **Clone the repository:**
