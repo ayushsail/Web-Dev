@@ -25,9 +25,9 @@
         /* justify content & align items */
         .container1{
             display: flex; /* this div becomes flex box, under which elements are called flex items */
-            justify-content: center; /* used to align items along the main axis */
+            justify-content: center; /* used to align items along the main axis(x axis) */
             /* center, end, start, flex end, flex start left, right, normal, space-between, space-around, space-evenly */
-            align-items: center; /* used to align items along the cross axis */
+            align-items: center; /* used to align items along the cross axis(y axis) */
             /* center, end, start, flex end, flex start left, right, normal, space-between, space-around, space-evenly, baseline, stretch */
         }
 
@@ -36,10 +36,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* align items in any direction you want */
+            flex-direction: row-reverse; /* align items in any direction you want */
             /* row, column, row-reverse, column-reverse */ 
             /* the main and cross axis changes according to the flex direction */
-            gap: 20px; /* it is used as a margin for itmes */
+            gap: 10px; /* it is used as a margin for itmes */
         }
 
         /* flex wrap & align content */
@@ -48,6 +48,7 @@
             align-items: center;
             flex-wrap: wrap; /* used to wrap the flex items */
             /* wrap, nowrap, wrap-reverse, balance */
+            justify-content: center; /* used to align items when they are in mulitple lines, here the items are in 3 lines */
             align-content: center; /* used to align items when they are in mulitple lines, here the items are in 3 lines */
             /* center, end, start, flex end, flex start left, right, normal, space-between, space-around, space-evenly, baseline, stretch */
             /* there is no justify-items property in flex box */
@@ -101,7 +102,7 @@
 
         /* flex-shrink */
         .items2{
-            flex-shrink: 2; /* it will shrink 2x faster than other items */
+            flex-shrink: 9; /* it will shrink 2x faster than other items */
         }
 
         /* align-self */
