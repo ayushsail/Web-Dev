@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable, DataType & Object</title>
+</head>
+<body>
+    <script>
+        console.log("Variable,Datatype & Object")
+
+
+        // var is globally scoped, while let & const are block scoped
+        // var can be updated or re-declared
+        var _a = 5;
+        var $b = 6;
+        var c = "ayush";
+        //var 55a = 'yash';   // Not allowed
+        console.log(_a+$b+8);
+        console.log(typeof _a, typeof $b, typeof c);
+
+
+        // let can be updated but cannot be re-declared
+        let m = 55 ;
+        m = m + 5;
+        console.log(m)
+        //let m = 40      // Not allowed
+
+
+        // const can neither be updated nor be re-declared
+        const a = 5;
+        //a = a + 5 ;       // Not allowed
+        console.log(a);
+
+
+        // difference between globally scoped & block scoped
+        console.log("difference between globally scoped & block scoped")
+
+        // var is globally scoped, can be used block & globally both
+        var q = 500;
+        {       // this is block
+            var q = 600;
+            console.log(q);     // 600
+        }
+        console.log(q);     // 600
+
+        // let is block & globally scoped, can be used in block & globally both
+        let r = 6;
+        {
+            let r = 7;
+            console.log(r);     // 7
+        }
+        console.log(r)      // 6
+
+
+        // const is block & globally scoped, can be used in block & globally both
+        const s = 55;
+        {
+            const s = 65;
+            console.log(s)      // 65
+        }
+        console.log(s)      // 55
+
+        // let & const can be re-declared only inside a block
+
+        
+        // Primitive datatype & Object
+        console.log("7 Primitive datatype")
+        // 7 Primitive datatype
+
+        let x = 'ayush';    // string
+        let y = 100;    // number 
+        let z = 3.5;    // number 
+        let t = undefined;      // undefined
+        let u = null;       // null
+        let v = true;     // boolean
+        let bigNumber = 123456789012345678901234567890n;    // bigint
+        let w = Symbol("ayush");    // symbol
+
+        console.log(x,y,z,t,u,v,bigNumber,w)
+        console.log(typeof x,typeof y,typeof z,typeof t,typeof u,typeof v, bigNumber,typeof w)
+
+        // why type of null is "object" ?
+        // In the specification of JS, type of null was declared as "object" very before, and many JS expert consider this has a mistake.
+        // But since the spec is very old, and it cannot be change because many old codes rely on this.
+
+
+
+        // Object
+        console.log("Object")
+        let o = {
+            name : "Ayush",     // you can give double quotes to key, if not then no problem, still works
+            "Job role" : "Asst. web dev",   // if there is space between key, mandatory to use double quotes for key
+            "job code" : 550,
+            is_handsome : true,
+        }
+        console.log(o)
+
+        o.salary = '100corers'      //alteration
+        console.log(o)
+        o.salary = '500corers'      // changing
+        console.log(o)
+
+
+        </script>
+</body>
+</html>
