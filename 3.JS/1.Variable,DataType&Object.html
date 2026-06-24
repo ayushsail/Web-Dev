@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variable, DataType & Object</title>
 </head>
+
 <body>
     <script>
+        // Comments
+        // single line comment
+        /*
+        I am 
+        multiline
+        comment
+         */
+
+
         console.log("Variable,Datatype & Object")
 
 
@@ -16,12 +27,12 @@
         var $b = 6;
         var c = "ayush";
         //var 55a = 'yash';   // Not allowed
-        console.log(_a+$b+8);
+        console.log(_a + $b + 8);
         console.log(typeof _a, typeof $b, typeof c);
 
 
         // let can be updated but cannot be re-declared
-        let m = 55 ;
+        let m = 55;
         m = m + 5;
         console.log(m)
         //let m = 40      // Not allowed
@@ -63,7 +74,7 @@
 
         // let & const can be re-declared only inside a block
 
-        
+
         // Primitive datatype & Object
         console.log("7 Primitive datatype")
         // 7 Primitive datatype
@@ -77,8 +88,8 @@
         let bigNumber = 123456789012345678901234567890n;    // bigint
         let w = Symbol("ayush");    // symbol
 
-        console.log(x,y,z,t,u,v,bigNumber,w)
-        console.log(typeof x,typeof y,typeof z,typeof t,typeof u,typeof v, bigNumber,typeof w)
+        console.log(x, y, z, t, u, v, bigNumber, w)
+        console.log(typeof x, typeof y, typeof z, typeof t, typeof u, typeof v, bigNumber, typeof w)
 
         // why type of null is "object" ?
         // In the specification of JS, type of null was declared as "object" very before, and many JS expert consider this has a mistake.
@@ -89,10 +100,10 @@
         // Object
         console.log("Object")
         let o = {
-            name : "Ayush",     // you can give double quotes to key, if not then no problem, still works
-            "Job role" : "Asst. web dev",   // if there is space between key, mandatory to use double quotes for key
-            "job code" : 550,
-            is_handsome : true,
+            name: "Ayush",     // you can give double quotes to key, if not then no problem, still works
+            "Job role": "Asst. web dev",   // if there is space between key, mandatory to use double quotes for key
+            "job code": 550,
+            is_handsome: true,
         }
         console.log(o)
 
@@ -100,8 +111,8 @@
         console.log(o)
         o.salary = '500corers'      // changing
         console.log(o)
-
-
-        </script>
+        
+    </script>
 </body>
+
 </html>
