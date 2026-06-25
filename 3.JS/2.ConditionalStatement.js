@@ -1,13 +1,12 @@
-// Operators
-console.log("Operators");
-console.log()
+console.log("OPERATORS");
 
 let a = 5;
 let b = 6;
 
+
 // Arithmetic Operators
-console.log("Arithmetic Operators");
-console.log()
+
+console.log("\nArithmetic Operators\n");
 console.log(a + b);
 console.log(a - b);
 console.log(a * b);
@@ -15,10 +14,10 @@ console.log(a ** b);
 console.log(a / b);
 console.log(a % b);
 
+
 //  Assignment Operators
-console.log()
-console.log("Assignment Operators");
-console.log()
+
+console.log("\nAssignment Operators\n");
 a += b;
 console.log(a);
 a = 5;
@@ -37,10 +36,10 @@ a = 5;
 a %= b;
 console.log(a);
 
+
 // Comparison Operators
-console.log()
-console.log("Comparison Operators");
-console.log()
+
+console.log("\nComparison Operators\n");
 console.log(a == b);
 console.log(a != b);
 console.log(a === b);   // equal value or type
@@ -53,10 +52,9 @@ console.log(a <= b);
 console.log('3' == 3)   // True
 console.log('3' === 3)  // False
 
+
 // Logical Operators
-console.log()
-console.log("Logical Operators");
-console.log()
+console.log("\nLogical Operators\n");
 console.log(a != b && b != a)   // true
 console.log(a == b || b == a)   // false
 
@@ -65,9 +63,7 @@ console.log(a == b || b == a)   // false
 
 // Conditional Statements
 
-console.log()
-console.log("Conditional Statement");
-console.log()
+console.log("\nCONDITIONAL STATEMENTS\n");
 let age = 5;
 
 // if - else 
@@ -90,9 +86,7 @@ else {
 }
 
 // Ternary Operator(?)
-console.log()
-console.log("Ternary Operator")
-console.log()
+console.log("\nTernary Operator\n")
 let c = 80
 let d = 60
 console.log(c>d ?(c-d) : (d-c))     // (condition ?(Operation) : (else operation))
