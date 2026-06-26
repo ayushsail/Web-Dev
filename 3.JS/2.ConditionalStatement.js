@@ -42,8 +42,8 @@ console.log(a);
 console.log("\nComparison Operators\n");
 console.log(a == b);
 console.log(a != b);
-console.log(a === b);   // equal value or type
-console.log(a !== b);   // not equal value or type
+console.log(a === b);   // equal value and type
+console.log(a !== b);   // not equal value and type
 console.log(a > b);
 console.log(a >= b);
 console.log(a < b);

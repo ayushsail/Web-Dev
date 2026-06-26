@@ -34,8 +34,7 @@ for (const key in object) {
         
         const element = object[key];
         }
-        */
-
+*/
 
 let obj = {
     name: "Ayush",
@@ -50,8 +49,6 @@ for (const key in obj) {
 // FOR OF LOOP
 
 console.log("\nfor of loop\n")
-
-
 /*
 for(const iterator of object) {
 operation
@@ -92,7 +89,7 @@ do while loop template :
 do {
     
 } while (condition);
-*/
+*/ 
 i = 10
 do {
     console.log(i)
